@@ -87,3 +87,89 @@ df15 = df3.loc[(df3['Name_y'] == df3['Name_y'])]
 df15 = df15.Name_y.value_counts()
 df15 = df15[df15 > 1]
 #print(len(df15.index))
+
+
+#For question 16
+
+df16 = df3.loc[(df3['ID_x'] == df3['Owner_ID'])]
+
+
+#For question 17
+
+df17 = df3.loc[(df3['Gender'] == df3['Gender'])]
+
+
+#For question 18
+
+df18 = df4.loc[(df4['ID_x'] != df4['Owner_ID'])]
+
+
+#For question 19
+
+df19 = df3.groupby('ID_x')
+#print(df19.count())
+
+
+#For question 20
+
+df20 = df3.groupby('Gender')
+
+
+#For question 21
+
+df21 = df3.sort_values(by='Owner_ID', ascending=False)
+
+
+#For question 22
+
+df22 = df3.sort_values(by=['Age_y'], ascending=False).head(5)
+
+
+#For question 23
+
+df23 = df3.sort_values(by=['Age_y'], ascending=False).head(12)
+df23 = df23.loc[(df23['Name_y'] != 'Ido')]
+
+
+
+#For question 24
+
+df24 = df3.sort_values(by=['Color'], ascending=False).head(1)
+df24 = df24.loc[(df24['Color'] == 'white')]
+
+
+
+#For question 25
+
+df25 = df3.sort_values(by=['Age_x'], ascending=False).head(1)
+
+#For question 26
+
+df26 = df3.sort_values(by=['Age_y'], ascending=False).head(1)
+#print(df26['Name_y'])
+
+
+#For question 27
+
+df27 = df3.sort_values(by=['Age_y'], ascending=False).head(12)
+df27 = df27.loc[(df27['Name_y'] != 'Ido')]
+
+
+#For question 28
+
+df28 = df3.sort_values(by=['Age_y'], ascending=False).head(3)
+
+
+#For question 29
+
+df29 = df3.groupby('ID_x')
+df29 = df29['Age_y'].max()
+
+
+
+
+#For question 30
+
+df30 = df3.sort_values(by=['Age_y'], ascending=False)
+df30 = df30.groupby('Type').mean().head(1)
+

@@ -172,4 +172,4 @@ df29 = df29['Age_y'].max()
 
 df30 = df3.sort_values(by=['Age_y'], ascending=False)
 df30 = df30.groupby('Type').mean().head(1)
-
+#print(df30.reset_index()['Type'][0])
